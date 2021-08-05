@@ -2,6 +2,7 @@
 using namespace std;
 
 //Diameter and Hieght in TREE
+//Hieght==root to leaf 
 
 struct Node
 {
