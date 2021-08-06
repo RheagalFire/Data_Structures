@@ -29,7 +29,7 @@ int height(Node* root)
 	return max(lhieght,rhieght)+1;
 }
 
-
+//o(n^2)
 bool balanced(Node* root)
 
 {
@@ -51,6 +51,33 @@ bool balanced(Node* root)
 	{
 		return false;
 	}
+
+}
+
+//Complexity:O(n)
+
+bool isbalanced(Node* root,int* hieght)
+{
+	if(root==NULL)
+	{
+		return true;
+	}
+	int lh=0,int rh=0;
+	if(isbalanced(root->left,&lh)==false)
+	{
+		return false;
+
+	}
+	if(isbalanced(root->right,&rh)==false)
+	{
+		return false;
+
+	}
+	*hieght=max(lh,rh)+1;
+	if(abs(lh-rh)<=1):
+		return true;
+	else
+		return false;
 
 }
 
