@@ -68,4 +68,38 @@
 
 	}
   ```
-  
+
+#### Max Path Sum in a BTREE
+  - Make a Global Variable of Maximum 
+  - For Each Node compute the following:
+  	- Node Value 
+  	- Max path through left child + node
+  	- Max path through right child + node
+  	- Max path through left + right + node 
+  - Choose the maximum of the four value for each node compare with global var ans and change it if it is > ans.
+  - Calculate Singlepath Sum(Excluding L+R in the above given 4 cases) and Return it.
+  ```
+  int maxutil(Node* root,int &ans)
+{
+	if(root==NULL)
+		return 0;
+	int left=maxutil(root->left,ans);
+	int right=maxutil(root->right,ans);
+
+	int nodemax=max(max(root->data,root->data+left+right),
+		max(root->data+left,root->data+right));
+
+	ans=max(ans,nodemax);
+	int singlepathsum=max(root->data,max(root->data+left,root->data+right));
+	return singlepathsum;
+
+}
+int maxsum(Node* root)
+{
+	int ans=maxi;
+	maxutil(root,ans);
+	return ans;
+}
+
+  ```
+	
