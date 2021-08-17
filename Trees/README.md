@@ -1,3 +1,3 @@
-### TREES
+## TREES
 
-Patterns and Algorithms 
+### Patterns and Algorithms 
