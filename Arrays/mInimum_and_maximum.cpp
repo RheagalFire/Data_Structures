@@ -13,10 +13,21 @@ struct Pair mimmaxfinder(int arr[],int n)
 {
 	int i;
 	struct Pair minmax;
+	if(n==1)
+	{
+		minmax.min=arr[0];
+		minmax.max=arr[0];
+		return minmax;
+	}
 	if(arr[0] < arr[1])
 	{
 		minmax.min=arr[0];
 		minmax.max=arr[1];
+	}
+	else
+	{
+		minmax.min=arr[1];
+		minmax.max=arr[0];
 	}
 	for(i=2;i<n;i++)
 	{
@@ -30,8 +41,8 @@ struct Pair mimmaxfinder(int arr[],int n)
 
 int main()
 {
-	int arr[]={1,2,3,4,5,6,7,8,9};
-	Pair minmax=mimmaxfinder(arr,9);
+	int arr[]={9,2,3,4,5,6,7};
+	Pair minmax=mimmaxfinder(arr,7);
 	cout<<minmax.min<<" "<<minmax.max;
 
 }
