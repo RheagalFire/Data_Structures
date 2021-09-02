@@ -39,6 +39,30 @@ void delete_t_pos(Node* &head,int pos)
 		delete todel;}
 }
 ```
+### Deleting with value
+```
+void delete_t_value(Node* &head,int val)
+{
+	if(head->data==val)
+	{
+		Node* temp=head;
+		head=head->next;
+		delete temp;
+	}
+	else
+	{Node* temp=head;
+		while(temp->next->data!=val)
+		{
+			temp=temp->next;
+		}
+		Node* todelete=temp->next;
+		temp->next=temp->next->next;
+	
+		delete todelete;}
+
+}
+```
+
 ## Reversing a Linked List 
 ```
 Node* reverse(Node* &head)
