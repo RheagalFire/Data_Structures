@@ -4,7 +4,7 @@ using namespace std;
 class Graph
 {
 	int V;
-	list<int>*adj;
+	list<int>*adj; // map<int,list<int>>adj;
 	map<int,bool>visited;
 public:
 	Graph(int V);
