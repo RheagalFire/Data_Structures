@@ -22,6 +22,7 @@ Graph::Graph(int V)
 void Graph::addEdge(int v,int w)
 {
 	adj[v].push_back(w);
+	adj[w].push_back(v);
 }
 
 void Graph::DFS(int s)
