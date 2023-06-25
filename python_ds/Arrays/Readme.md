@@ -1,5 +1,13 @@
 ## Quick Reference Files
 
+## Table of Contents
+- [Two Sum (Hash Map Solution)](#two-sum-hash-map-solution)
+- [Maximum Subarray (Sliding Window Technique)](#maximum-subarray)
+- [Best Time to Buy and Sell Stock](#best-time-to-sell-and-buy-a-stock)
+- [Contains Duplicate](#contains-duplicate)
+- [Three Sum to Zero](#three-sum-to-zero)
+- [Maximum Product Subarray](#maximum-product-subarray)
+
 ### Two Sum (Hash Map Solution)
 ```
 class Solution:
