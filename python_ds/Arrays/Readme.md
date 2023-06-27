@@ -7,7 +7,7 @@
 - [Contains Duplicate](#contains-duplicate)
 - [Three Sum to Zero](#three-sum-to-zero)
 - [Maximum Product Subarray](#maximum-product-subarray)
-
+- [Container with maximum Water](#Container-with-maximum-Water)
 ### Two Sum (Hash Map Solution)
 ```
 class Solution:
@@ -119,4 +119,20 @@ class Solution(object):
             prev_min = min(i,prev_min*i)
             ans = max(ans,prev_max)
         return ans
+```
+### Container with maximum Water
+```
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        left = 0 
+        right = len(height)-1
+        max_area = -float(inf)
+        while(left<right):
+           curr_area = min(height[left],height[right])*(right-left)
+           max_area = max(curr_area,max_area)
+           if(height[left]<height[right]):
+               left+=1
+           elif(height[left]>=height[right]):
+               right-=1    
+        return max_area
 ```
